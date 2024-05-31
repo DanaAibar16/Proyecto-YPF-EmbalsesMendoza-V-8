@@ -1,0 +1,186 @@
+!<DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Donación</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        <style>
+            body {
+                background-color: #f0f0f0; /* Color de fondo */
+            }
+            #form-container {
+                background-color: #ffffff; /* Fondo del formulario */
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+                margin: auto;
+                margin-top: 50px;
+            }
+            label {
+                color: #333333; /* Color del texto de las etiquetas */
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+            }
+            button {
+                background-color: #4CAF50; /* Color del botón */
+                color: white; /* Color del texto del botón */
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #45a049; /* Color del botón al pasar el ratón */
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <!--header no tocar-->
+    <body>
+        <header class="header">
+            <div class="menu container">
+                <a href="img/aguita.png" class="logo" alt="Logo ingenias Mendoza">Logo</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-incono" alt="menu">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li> <a href="index.html">Inicio</a></li>
+                        <li> <a href="./embalses.html">Embalses</a></li>
+                        <li> <a href="./consejos.html">Consejos</a></li>
+                        <li> <a href="./novedades.html">Novedades</a></li>
+                        <li> <a href="./Donaciones-voluntariado.html">Forma parte</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content container">
+                <h1>Ingenias Mendoza</h1>
+                <body>
+                    <body>
+                        <div id="form-container">
+                            <form id="donation-form">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name" required>
+                    
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="phone">Número:</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    
+                                <label for="amount">Monto de la Donación:</label>
+                                <input type="number" id="amount" name="amount" required>
+                    
+                                <label for="message">Mensaje:</label>
+                                <textarea id="message" name="message"></textarea>
+                    
+                                <button type="submit">Donar</button>
+                            </form>
+                        </div>
+                    
+                        <div id="success-message" class="hidden">
+                            <h2>¡Gracias por tu donación!</h2>
+                            <p>Tu contribución es muy apreciada. Nos pondremos en contacto contigo pronto.</p>
+                        </div>
+                    
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const form = document.getElementById('donation-form');
+                                form.addEventListener('submit', function(event) {
+                                    event.preventDefault();
+                                    if (form.checkValidity()) {
+                                        document.getElementById('form-container').classList.add('hidden');
+                                        document.getElementById('success-message').classList.remove('hidden');
+                                    } else {
+                                        form.reportValidity();
+                                    }
+                                });
+                            });
+                        </script>
+                    </body>
+            <div>
+                <justify>
+                    <a href="#" class="btn-1">Contacto</a>
+                </justify>
+                </div>
+        </header>
+    
+        
+        <!--a partir de aca empezar a editar el body -->
+    
+    
+    
+    
+    
+    <!--footer no tocar -->
+    </center>  <footer class="footer">
+    
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon> <!--1 Incono descargado de una pagina--> 
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- 2 Incono descargado de una pagina--> 
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon><!-- 3 Incono descargado de una pagina--> 
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon><!-- 4 Incono descargado de una pagina--> 
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon><!-- 5 Incono descargado de una pagina--> 
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="#" class="menu-icon">Inicio</a>
+            </li>
+            <li class="menu-elem">
+                <a href="#" class="menu-icon">Equipo</a>
+            </li>
+            <li class="menu-elem">
+                <a href="#" class="menu-icon">Contacto</a>
+            </li>
+    
+            <li class="menu-elem">
+                <a href="#" class="menu-icon">Sobre Nosotros</a>
+            </li>
+        </ul>
+     
+        <p class="text">@2024 - Todos los derechos reservados</p>
+    </footer>
+    <!--Area para guardar los scripts de los iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
